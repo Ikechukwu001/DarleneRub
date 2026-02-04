@@ -1,6 +1,6 @@
-import Hero from '../Components/Hero';
-import KnowMe from '@/Components/KnowMe';
-import ServicesSection from '@/Components/ServiceSection';
+import Hero from '../components/Hero';
+import KnowMe from '@/components/KnowMe';
+import ServicesSection from '@/components/ServiceSection';
 
 export default function Home() {
   return (

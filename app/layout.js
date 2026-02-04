@@ -1,6 +1,6 @@
 import { Playfair_Display, Lora } from 'next/font/google';
 import Header from '@/components/Header';
-import Footer from '@/Components/Footer';
+import Footer from '@/components/Footer';
 import './globals.css';
 
 const playfairDisplay = Playfair_Display({
