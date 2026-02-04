@@ -17,7 +17,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-primary">Darlene’s</span>
+              <span className="text-2xl font-bold text-primary">Darlene's</span>
               <span className="text-xs text-accent uppercase tracking-widest">RUB</span>
             </div>
           </Link>
@@ -93,7 +93,16 @@ export default function Header() {
             >
               Payment
             </Link>
-            <button className="px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-secondary hover:text-secondary-foreground transition-colors duration-200 text-sm font-medium">
+            <Link
+              href="/termsandconditions"
+              className="text-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
+            >
+              Terms
+            </Link>
+            <button 
+              onClick={() => window.location.href = '/prices'}
+              className="px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-secondary hover:text-secondary-foreground transition-colors duration-200 text-sm font-medium"
+            >
               Book Now
             </button>
           </nav>
@@ -102,43 +111,73 @@ export default function Header() {
         {/* Mobile Navigation */}
         <nav
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? 'max-h-64' : 'max-h-0'
+            isMenuOpen ? 'max-h-[500px]' : 'max-h-0'
           }`}
         >
           <div className="py-4 border-t border-border space-y-3">
             <Link
               href="/"
+              onClick={toggleMenu}
               className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
             >
               Home
             </Link>
             <Link
+              href="/gallery"
+              onClick={toggleMenu}
+              className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
+            >
+              Gallery
+            </Link>
+            <Link
               href="/services"
+              onClick={toggleMenu}
               className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
             >
               Services
             </Link>
             <Link
-              href="/about"
+              href="/review"
+              onClick={toggleMenu}
               className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
             >
-              About
+              Review
+            </Link>
+            <Link
+              href="/prices"
+              onClick={toggleMenu}
+              className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
+            >
+              Prices
             </Link>
             <Link
               href="/contact"
+              onClick={toggleMenu}
               className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
             >
               Contact
             </Link>
             <Link
+              href="/payment"
+              onClick={toggleMenu}
+              className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
+            >
+              Payment
+            </Link>
+            <Link
               href="/termsandconditions"
+              onClick={toggleMenu}
               className="block text-foreground hover:text-primary transition-colors duration-200 py-2 text-sm font-medium"
             >
               Terms & Conditions
             </Link>
             <button 
-            onClick={() => window.location.href = '/prices'}
-            className="w-full px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-secondary hover:text-secondary-foreground transition-colors duration-200 text-sm font-medium">
+              onClick={() => {
+                toggleMenu();
+                window.location.href = '/prices';
+              }}
+              className="w-full px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-secondary hover:text-secondary-foreground transition-colors duration-200 text-sm font-medium"
+            >
               Book Now
             </button>
           </div>
