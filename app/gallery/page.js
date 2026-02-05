@@ -48,6 +48,61 @@ export default function GalleryPage() {
       alt: 'Peaceful meditation corner',
       span: 'md:col-span-1 md:row-span-1'
     }
+    ,
+    {
+      id: 8,
+      src: '/servicefour.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 9,
+      src: '/servicethree.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 10,
+      src: '/servicefive.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-2 md:row-span-2'
+    },
+    {
+      id: 11,
+      src: '/servicesix.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 12,
+      src: '/serviceseven.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 13,
+      src: '/serviceeight.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 14,
+      src: '/servicenine.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 15,
+      src: '/serviceten.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
+    {
+      id: 16,
+      src: '/end.jpeg',
+      alt: 'Peaceful meditation corner',
+      span: 'md:col-span-1 md:row-span-1'
+    },
   ];
 
   const openLightbox = (image) => {
