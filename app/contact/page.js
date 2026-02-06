@@ -155,14 +155,6 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Netlify static form detection */}
-      <form name="contact" data-netlify="true" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="tel" name="phone" />
-        <input type="text" name="zipcode" />
-        <textarea name="message"></textarea>
-      </form>
     </section>
   );
 }
