@@ -16,7 +16,7 @@ export default function KnowMe() {
 
         {/* Description paragraph */}
         <p className="text-lg text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-         At Darlene Rub, we specialize in indulgent massage experiences crafted to awaken the senses, relax the body, and restore inner harmony. Our expert therapists offer a variety of tailored sessions, including Nuru massage, deep tissue, full body, Swedish, erotic, FBSM, GFE, FS, Pastorate, and milking table treatments. Every session is designed to meet your personal desires and wellness needs, combining skilled touch with mindful techniques to deliver ultimate relaxation, pleasure, and balance for both body and mind.
+         At Darlene Rub, i specialize in indulgent massage experiences crafted to awaken the senses, relax the body, and restore inner harmony. My expert therapists offer a variety of tailored sessions, including Nuru massage, deep tissue, full body, Swedish, erotic, FBSM, GFE, FS, Pastorate, and milking table treatments. Every session is designed to meet your personal desires and wellness needs, combining skilled touch with mindful techniques to deliver ultimate relaxation, pleasure, and balance for both body and mind.
         </p>
 
         {/* Images grid - 2 columns on desktop and mobile */}

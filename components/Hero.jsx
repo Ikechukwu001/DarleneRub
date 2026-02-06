@@ -53,7 +53,7 @@ const Hero = () => {
             Unlock Your Body's Natural Healing
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-10 font-light leading-relaxed">
-            Experience transformative wellness through our professional massage therapy services. Restore balance, reduce stress, and rejuvenate your mind and body.
+            Experience transformative wellness through my professional massage therapy services. Restore balance, reduce stress, and rejuvenate your mind and body.
           </p>
 
           {/* CTA Buttons */}

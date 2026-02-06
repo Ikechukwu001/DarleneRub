@@ -40,14 +40,14 @@ export default function ServicesSection() {
         {/* Heading with underline */}
         <div className="mb-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 inline-block">
-            Our Signature Services
+            My Signature Services
           </h2>
           <div className="w-24 h-1 bg-accent rounded-full mt-2 mx-auto"></div>
         </div>
 
         {/* Description paragraph */}
         <p className="text-lg text-muted-foreground max-w-3xl mb-16 leading-relaxed text-center mx-auto">
-          Experience transformative healing through our expertly curated massage therapies. 
+          Experience transformative healing through my expertly curated massage therapies. 
           Each treatment is designed to restore balance, relieve tension, and rejuvenate your entire being.
         </p>
 

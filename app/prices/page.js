@@ -19,7 +19,7 @@ export default function PricingPage() {
       id: 2,
       duration: '60-90 Minutes',
       price: 250,
-      description: 'Our most popular comprehensive session',
+      description: 'My most popular comprehensive session',
       features: [
         'Full body massage',
         'Deep relaxation',
@@ -136,7 +136,7 @@ export default function PricingPage() {
           <div className="bg-muted/50 rounded-lg p-6 border border-muted-foreground/10">
             <p className="text-foreground font-medium mb-2">Flexible Service Options</p>
             <p className="text-muted-foreground text-sm">
-              Same pricing whether we come to you or you visit our serene studio space. 
+              Same pricing whether i come to you or you visit my serene studio space. 
               Travel fees may apply for locations beyond 15 miles.
             </p>
           </div>
@@ -242,9 +242,9 @@ export default function PricingPage() {
               <div className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-accent shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Certified Therapists</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Certified Therapist</h3>
                   <p className="text-sm text-muted-foreground">
-                    Licensed professionals with years of experience
+                    Licensed professional with years of experience
                   </p>
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default function PricingPage() {
                 Schedule Your Appointment
               </button>
               <p className="text-sm text-muted-foreground mt-4">
-                Have questions? <a href="/contact" className="text-accent hover:underline">Contact us</a> for custom packages
+                Have questions? <a href="/contact" className="text-accent hover:underline">Contact Me</a> for custom packages
               </p>
             </div>
           </div>
@@ -268,7 +268,7 @@ export default function PricingPage() {
         {/* Cancellation Policy */}
         <div className="mt-12 max-w-3xl mx-auto text-center">
           <p className="text-sm text-muted-foreground">
-            <span className="font-semibold text-foreground">Cancellation Policy:</span> We require 24-hour notice for cancellations or rescheduling. 
+            <span className="font-semibold text-foreground">Cancellation Policy:</span> I require 24-hour notice for cancellations or rescheduling. 
             Late cancellations may be subject to a fee. Gift certificates and package deals available upon request.
           </p>
         </div>

@@ -72,15 +72,15 @@ export default function ServicesPage() {
         {/* Heading with underline */}
         <div className="mb-8">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 inline-block">
-            Our Services
+            My Services
           </h1>
           <div className="w-24 h-1 bg-accent rounded-full mt-2"></div>
         </div>
 
         {/* Description paragraph */}
         <p className="text-lg text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-          Discover our range of specialized massage therapies, each carefully designed to address 
-          your unique wellness needs. Our certified therapists combine traditional techniques with 
+          Discover my range of specialized massage therapies, each carefully designed to address 
+          your unique wellness needs. My certified therapists combine traditional techniques with 
           modern approaches to deliver transformative healing experiences in a safe, professional, 
           and nurturing environment.
         </p>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
               <div className={index % 2 === 1 ? 'md:order-1' : ''}>
                 {/* Icon and Title */}
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
                     <service.icon className="w-6 h-6 text-accent" />
                   </div>
                   <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
@@ -172,23 +172,23 @@ export default function ServicesPage() {
             <div>
               <h3 className="text-foreground font-bold mb-3">Before Your Session</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We'll begin with a brief consultation to understand your specific needs, preferences, 
-                and any areas of concern. This helps us customize your treatment for optimal results.
+                i'll begin with a brief consultation to understand your specific needs, preferences, 
+                and any areas of concern. This helps me customize your treatment for optimal results.
               </p>
             </div>
 
             <div>
               <h3 className="text-foreground font-bold mb-3">During Your Session</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Relax in our serene environment as our skilled therapists work their magic. 
-                We maintain the highest standards of professionalism and respect your comfort at all times.
+                Relax in my serene environment as i work my magic. 
+                I maintain the highest standards of professionalism and respect your comfort at all times.
               </p>
             </div>
 
             <div>
               <h3 className="text-foreground font-bold mb-3">After Your Session</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Take a moment to enjoy the peaceful afterglow. We'll provide recommendations for 
+                Take a moment to enjoy the peaceful afterglow. I'll provide recommendations for 
                 maintaining your wellness between sessions and scheduling your next appointment.
               </p>
             </div>
@@ -196,8 +196,8 @@ export default function ServicesPage() {
             <div>
               <h3 className="text-foreground font-bold mb-3">Professional Standards</h3>
               <p className="text-muted-foreground leading-relaxed">
-                All our therapists are certified professionals committed to your safety, comfort, 
-                and satisfaction. We maintain strict confidentiality and ethical standards.
+                I am a certified professional committed to your safety, comfort, 
+                and satisfaction. I maintain strict confidentiality and ethical standards.
               </p>
             </div>
           </div>

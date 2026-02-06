@@ -13,23 +13,13 @@ export default function ContactPage() {
     setStatus("");
 
     const form = e.target;
-
-    const data = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      zipcode: form.zipcode.value.trim(),
-      message: form.message.value.trim(),
-    };
+    const formData = new FormData(form);
 
     try {
-      const res = await fetch("/api/contact", {
+      await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
       });
-
-      if (!res.ok) throw new Error("Failed");
 
       setStatus("Your request has been sent successfully. I’ll get back to you shortly.");
       form.reset();
@@ -96,7 +86,15 @@ export default function ContactPage() {
             Book a Session
           </h2>
 
-          <form className="grid gap-6" onSubmit={handleSubmit}>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+            className="grid gap-6"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
             <div className="grid md:grid-cols-2 gap-6">
               <input
                 name="name"
@@ -156,6 +154,15 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
+
+      {/* Netlify static form detection */}
+      <form name="contact" data-netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="zipcode" />
+        <textarea name="message"></textarea>
+      </form>
     </section>
   );
 }

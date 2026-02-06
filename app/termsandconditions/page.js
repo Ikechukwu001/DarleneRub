@@ -16,8 +16,8 @@ export default function TermsPage() {
 
         {/* Description paragraph */}
         <p className="text-lg text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-          Please read our terms and conditions carefully before booking a session. By scheduling 
-          an appointment with us, you agree to comply with these policies designed to ensure a 
+          Please read my terms and conditions carefully before booking a session. By scheduling 
+          an appointment with me, you agree to comply with these policies designed to ensure a 
           safe, professional, and respectful experience for everyone.
         </p>
 
@@ -126,7 +126,7 @@ export default function TermsPage() {
                 <div>
                   <h3 className="text-foreground font-bold mb-2">Cash Payment Not Accepted From First-Timers</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    To ensure security and maintain professional standards, we do not accept cash 
+                    To ensure security and maintain professional standards, i do not accept cash 
                     payments from first-time clients. All initial transactions must be completed 
                     through cryptocurrency.
                   </p>
@@ -153,7 +153,7 @@ export default function TermsPage() {
                   <h3 className="text-foreground font-bold mb-2">Age Requirement: Over 18 Years Old</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     All clients must be 18 years of age or older. Valid identification may be 
-                    requested to verify age before services are rendered. We strictly adhere to 
+                    requested to verify age before services are rendered. I strictly adhere to 
                     all legal age requirements.
                   </p>
                 </div>
@@ -165,7 +165,7 @@ export default function TermsPage() {
                   <h3 className="text-foreground font-bold mb-2">Strict Prohibition of Illegal Activities</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Any illegal activities are strictly prohibited and will result in immediate 
-                    termination of services and reporting to appropriate authorities. Our services 
+                    termination of services and reporting to appropriate authorities. My services 
                     are legal, professional massage therapy only.
                   </p>
                 </div>
@@ -176,8 +176,8 @@ export default function TermsPage() {
                 <div>
                   <h3 className="text-foreground font-bold mb-2">Engage Only for Fun; Safety Assured</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Our services are designed for relaxation, wellness, and enjoyment in a safe 
-                    environment. Your safety and comfort are our top priorities, and we maintain 
+                    My services are designed for relaxation, wellness, and enjoyment in a safe 
+                    environment. Your safety and comfort are my top priorities, and I maintain 
                     strict health and safety protocols.
                   </p>
                 </div>
@@ -189,7 +189,7 @@ export default function TermsPage() {
                   <h3 className="text-foreground font-bold mb-2">Confidentiality Priority; Expect Mutual Discretion</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Your privacy is paramount. All client information and session details are kept 
-                    strictly confidential. We expect the same level of discretion from our clients 
+                    strictly confidential. I expect the same level of discretion from our clients 
                     regarding our services and interactions.
                   </p>
                 </div>
@@ -215,8 +215,8 @@ export default function TermsPage() {
               <div>
                 <h3 className="text-foreground font-bold mb-2">Health Disclosure</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Please inform us of any health conditions, allergies, or physical limitations 
-                  before your session. This ensures we can provide the safest and most effective 
+                  Please inform me of any health conditions, allergies, or physical limitations 
+                  before your session. This ensures I can provide the safest and most effective 
                   treatment for your needs.
                 </p>
               </div>
@@ -224,7 +224,7 @@ export default function TermsPage() {
               <div>
                 <h3 className="text-foreground font-bold mb-2">Session Modifications</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We reserve the right to modify or terminate any session if professional standards 
+                  I reserve the right to modify or terminate any session if professional standards 
                   are not maintained or if safety concerns arise.
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function TermsPage() {
               Agreement to Terms
             </h2>
             <p className="text-white/90 text-lg leading-relaxed mb-6">
-              By booking a session with us, you acknowledge that you have read, understood, 
+              By booking a session with me, you acknowledge that you have read, understood, 
               and agree to abide by all terms and conditions outlined above.
             </p>
             <button
@@ -252,11 +252,11 @@ export default function TermsPage() {
         {/* Contact for Questions */}
         <div className="mt-16 text-center max-w-2xl mx-auto">
           <p className="text-muted-foreground leading-relaxed">
-            Have questions about our terms and conditions?{' '}
+            Have questions about my terms and conditions?{' '}
             <a href="/contact" className="text-accent hover:underline font-bold">
-              Contact us
+              Contact me
             </a>{' '}
-            and we'll be happy to clarify any concerns before you book.
+            and I'll be happy to clarify any concerns before you book.
           </p>
         </div>
       </div>

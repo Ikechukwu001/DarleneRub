@@ -34,8 +34,8 @@ export default function PaymentPage() {
 
         {/* Description paragraph */}
         <p className="text-lg text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-          We accept cryptocurrency payments for your convenience and privacy. Simply send your 
-          payment to one of the addresses below and contact us with your transaction details to 
+          I accept cryptocurrency payments for your convenience and privacy. Simply send your 
+          payment to one of the addresses below and contact me with your transaction details to 
           confirm your booking.
         </p>
 
@@ -167,7 +167,7 @@ export default function PaymentPage() {
               </div>
               <h3 className="text-foreground font-bold mb-2">Confirm Booking</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Contact us with your transaction ID and booking details to confirm your appointment.
+                Contact me with your transaction ID and booking details to confirm your appointment.
               </p>
             </div>
           </div>
@@ -196,7 +196,7 @@ export default function PaymentPage() {
               <div>
                 <h4 className="text-foreground font-bold mb-1">Security & Privacy</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  All transactions are secure and anonymous. We never share your payment information with third parties.
+                  All transactions are secure and anonymous. I never share your payment information with third parties.
                 </p>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function PaymentPage() {
               <div>
                 <h4 className="text-foreground font-bold mb-1">Booking Confirmation</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  After your payment is confirmed, we'll reach out within 24 hours to finalize your appointment details.
+                  After your payment is confirmed, I'll reach out within 24 hours to finalize your appointment details.
                 </p>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function PaymentPage() {
             Need Help with Your Payment?
           </h2>
           <p className="text-white/90 text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
-            Our team is here to assist you. Contact us if you have any questions or need 
+            My team is here to assist you. Contact me if you have any questions or need 
             support completing your transaction.
           </p>
           <button
@@ -233,7 +233,7 @@ export default function PaymentPage() {
         {/* Pricing Reference */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground leading-relaxed">
-            Not sure about pricing? <a href="/pricing" className="text-accent hover:underline font-bold">View our pricing page</a> to see all available packages.
+            Not sure about pricing? <a href="/pricing" className="text-accent hover:underline font-bold">View my pricing page</a> to see all available packages.
           </p>
         </div>
       </div>
