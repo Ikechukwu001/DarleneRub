@@ -11,18 +11,18 @@ export async function POST(req) {
     await resend.emails.send({
       from: "Booking <onboarding@resend.dev>",
       to: email,
-      subject: "We Received Your Booking Request",
+      subject: "I Received Your Booking Request",
       html: `
         <h2>Hello ${name},</h2>
-        <p>Thank you for reaching out! We’ve received your booking request.</p>
-        <p>We will get back to you shortly.</p>
+        <p>Thank you for reaching out! i’ve received your booking request.</p>
+        <p>i will get back to you shortly.</p>
       `,
     });
 
     // 2️⃣ Send full form submission to your email
     await resend.emails.send({
       from: "Booking Form <onboarding@resend.dev>",
-      to: "michaeljustice727@gmail.com",
+      to: "servicedarlene2@gmail.com",
       replyTo: email, // optional: reply to the user's email
       subject: `New Booking Request from ${name}`,
       html: `
