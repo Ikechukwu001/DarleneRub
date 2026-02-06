@@ -89,11 +89,15 @@ export default function ContactPage() {
           <form
             name="contact"
             method="POST"
+            action="/"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="grid gap-6"
           >
+            {/* Required Netlify fields */}
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
 
             <div className="grid md:grid-cols-2 gap-6">
               <input
@@ -154,7 +158,6 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
-
     </section>
   );
 }
