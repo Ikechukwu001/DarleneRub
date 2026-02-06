@@ -13,18 +13,28 @@ export default function ContactPage() {
     setStatus("");
 
     const form = e.target;
-    const formData = new FormData(form);
+
+    const payload = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      zipcode: form.zipcode.value,
+      message: form.message.value,
+    };
 
     try {
-      await fetch("/", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
-      setStatus("Your request has been sent successfully. I’ll get back to you shortly.");
+      if (!res.ok) throw new Error();
+
+      setStatus("Your request has been sent. Check your email.");
       form.reset();
     } catch {
-      setStatus("Something went wrong. Please try again.");
+      setStatus("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -33,7 +43,6 @@ export default function ContactPage() {
   return (
     <section className="w-full bg-background py-20 md:py-32">
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10">
-
         {/* Heading */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 inline-block">
@@ -44,40 +53,11 @@ export default function ContactPage() {
 
         {/* Contact methods */}
         <div className="grid gap-6 mb-20">
-          <ContactItem
-            icon={<Phone className="w-6 h-6" />}
-            label="Call / Text"
-            value="(720) 878-9647"
-            href="tel:+17208789647"
-          />
-
-          <ContactItem
-            icon={<MessageCircle className="w-6 h-6" />}
-            label="WhatsApp"
-            value="(720) 878-9647"
-            href="https://wa.me/17208789647"
-          />
-
-          <ContactItem
-            icon={<Lock className="w-6 h-6" />}
-            label="Signal"
-            value="(720) 878-9647"
-            href="https://signal.me/#p/+17208789647"
-          />
-
-          <ContactItem
-            icon={<Send className="w-6 h-6" />}
-            label="Telegram"
-            value="(720) 878-9647"
-            href="https://t.me/+17208789647"
-          />
-
-          <ContactItem
-            icon={<Disc className="w-6 h-6" />}
-            label="Discord"
-            value="Sweet_darlene / (720) 878-9647"
-            href="https://discord.com/"
-          />
+          <ContactItem icon={<Phone className="w-6 h-6" />} label="Call / Text" value="(720) 878-9647" href="tel:+17208789647" />
+          <ContactItem icon={<MessageCircle className="w-6 h-6" />} label="WhatsApp" value="(720) 878-9647" href="https://wa.me/17208789647" />
+          <ContactItem icon={<Lock className="w-6 h-6" />} label="Signal" value="(720) 878-9647" href="https://signal.me/#p/+17208789647" />
+          <ContactItem icon={<Send className="w-6 h-6" />} label="Telegram" value="(720) 878-9647" href="https://t.me/+17208789647" />
+          <ContactItem icon={<Disc className="w-6 h-6" />} label="Discord" value="Sweet_darlene / (720) 878-9647" href="https://discord.com/" />
         </div>
 
         {/* Booking Form */}
@@ -86,75 +66,27 @@ export default function ContactPage() {
             Book a Session
           </h2>
 
-          <form
-            name="contact"
-            method="POST"
-            action="/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            className="grid gap-6"
-          >
-            {/* Required Netlify fields */}
+          <form name="contact" method="POST" action="/" onSubmit={handleSubmit} className="grid gap-6">
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
 
             <div className="grid md:grid-cols-2 gap-6">
-              <input
-                name="name"
-                type="text"
-                placeholder="Full Name"
-                required
-                className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent"
-              />
-
-              <input
-                name="email"
-                type="email"
-                placeholder="Email Address"
-                required
-                className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent"
-              />
+              <input name="name" type="text" placeholder="Full Name" required className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent" />
+              <input name="email" type="email" placeholder="Email Address" required className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent" />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <input
-                name="phone"
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent"
-              />
-
-              <input
-                name="zipcode"
-                type="text"
-                placeholder="Zip Code"
-                required
-                className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent"
-              />
+              <input name="phone" type="tel" placeholder="Phone Number" className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent" />
+              <input name="zipcode" type="text" placeholder="Zip Code" required className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent" />
             </div>
 
-            <textarea
-              name="message"
-              rows="5"
-              required
-              placeholder="Preferred date, time, and type of massage"
-              className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent"
-            />
+            <textarea name="message" rows="5" required placeholder="Preferred date, time, and type of massage" className="w-full rounded-md border border-border bg-background px-4 py-3 focus:ring-2 focus:ring-accent" />
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-fit rounded-md bg-accent px-8 py-3 text-accent-foreground font-medium hover:opacity-90 transition disabled:opacity-60"
-            >
+            <button type="submit" disabled={loading} className="w-fit rounded-md bg-accent px-8 py-3 text-accent-foreground font-medium hover:opacity-90 transition disabled:opacity-60">
               {loading ? "Sending..." : "Request Appointment"}
             </button>
 
-            {status && (
-              <p className="text-sm text-muted-foreground mt-2">
-                {status}
-              </p>
-            )}
+            {status && <p className="text-sm text-muted-foreground mt-2">{status}</p>}
           </form>
         </div>
       </div>
@@ -162,15 +94,9 @@ export default function ContactPage() {
   );
 }
 
-/* Reusable contact row */
 function ContactItem({ icon, label, value, href }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-between rounded-lg border border-border bg-muted/40 px-6 py-4 hover:bg-muted transition"
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between rounded-lg border border-border bg-muted/40 px-6 py-4 hover:bg-muted transition">
       <div className="flex items-center gap-4">
         <span className="text-2xl">{icon}</span>
         <div>
