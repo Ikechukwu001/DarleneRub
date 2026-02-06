@@ -7,23 +7,31 @@ export async function POST(req) {
     const data = await req.json();
     const { name, email, phone, zipcode, message } = data;
 
+    // 1️⃣ Send confirmation to user
     await resend.emails.send({
       from: "Booking <onboarding@resend.dev>",
-      to: [email, "michaeljustice727@gmail.com"],
-      replyTo: "michaeljustice727@email.com",
-      subject: "Appointment Request Received",
+      to: email,
+      subject: "We Received Your Booking Request",
       html: `
         <h2>Hello ${name},</h2>
-        <p>Thank you for reaching out. I’ve received your booking request.</p>
+        <p>Thank you for reaching out! We’ve received your booking request.</p>
+        <p>We will get back to you shortly.</p>
+      `,
+    });
 
-        <p><strong>Details:</strong></p>
-        <ul>
-          <li>Phone: ${phone}</li>
-          <li>Zip Code: ${zipcode}</li>
-          <li>Message: ${message}</li>
-        </ul>
-
-        <p>I’ll get back to you shortly.</p>
+    // 2️⃣ Send full form submission to your email
+    await resend.emails.send({
+      from: "Booking Form <onboarding@resend.dev>",
+      to: "michaeljustice727@gmail.com",
+      replyTo: email, // optional: reply to the user's email
+      subject: `New Booking Request from ${name}`,
+      html: `
+        <h2>New Booking Request</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Zip Code:</strong> ${zipcode}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
     });
 
