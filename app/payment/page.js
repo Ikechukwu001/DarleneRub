@@ -1,141 +1,49 @@
 'use client';
-import { useState } from 'react';
-import { Copy, Check, Bitcoin, Wallet, Shield, Clock } from 'lucide-react';
+import { CreditCard, ShieldCheck, MessageCircle, Clock } from 'lucide-react';
 
 export default function PaymentPage() {
-  const [copiedBTC, setCopiedBTC] = useState(false);
-  const [copiedETH, setCopiedETH] = useState(false);
-
-  const btcAddress = '3Ei2CLgA9tXQ9okHKTxwUnt8VcpRUBHHRo';
-  const ethAddress = '0x0e67715B362A130ee7dffa7029F5CDc2Cc50ad0e';
-
-  const copyToClipboard = (text, type) => {
-    navigator.clipboard.writeText(text).then(() => {
-      if (type === 'BTC') {
-        setCopiedBTC(true);
-        setTimeout(() => setCopiedBTC(false), 2000);
-      } else {
-        setCopiedETH(true);
-        setTimeout(() => setCopiedETH(false), 2000);
-      }
-    });
-  };
-
   return (
     <section className="w-full bg-background py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
-        {/* Heading with underline */}
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 inline-block">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-10">
+        {/* Heading */}
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-3">
             Payment Information
           </h1>
-          <div className="w-24 h-1 bg-accent rounded-full mt-2"></div>
+          <div className="w-24 h-1 bg-accent rounded-full mx-auto mt-2"></div>
         </div>
 
-        {/* Description paragraph */}
-        <p className="text-lg text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-          I accept cryptocurrency payments for your convenience and privacy. Simply send your 
-          payment to one of the addresses below and contact me with your transaction details to 
-          confirm your booking.
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed text-center">
+          To keep things simple and secure, payment details are arranged directly with each
+          client based on the service booked. Reach out and I'll walk you through the
+          available options.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Bitcoin Payment Card */}
-          <div className="bg-background rounded-lg shadow-lg overflow-hidden border border-muted-foreground/20">
-            <div className="bg-linear-to-r from-orange-500/90 to-orange-600/90 p-6 text-white">
-              <div className="flex items-center gap-3 mb-2">
-                <Bitcoin className="w-8 h-8" />
-                <h2 className="text-2xl font-serif font-bold">Bitcoin (BTC)</h2>
-              </div>
-              <p className="text-white/90">Secure cryptocurrency payment</p>
-            </div>
-
-            <div className="p-6">
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Send your Bitcoin payment to the address below. Click to copy the address:
-              </p>
-
-              {/* Address display - clickable */}
-              <div
-                onClick={() => copyToClipboard(btcAddress, 'BTC')}
-                className="bg-muted/50 rounded-lg p-4 mb-4 cursor-pointer hover:bg-muted transition-colors border border-muted-foreground/20"
-              >
-                <p className="text-foreground font-mono text-sm break-all leading-relaxed">
-                  {btcAddress}
-                </p>
-              </div>
-
-              {/* Copy button */}
-              <button
-                onClick={() => copyToClipboard(btcAddress, 'BTC')}
-                className="w-full py-3 px-6 bg-accent text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                {copiedBTC ? (
-                  <>
-                    <Check className="w-5 h-5" />
-                    Address Copied!
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-5 h-5" />
-                    Copy BTC Address
-                  </>
-                )}
-              </button>
-            </div>
+        {/* Main CTA Card */}
+        <div className="bg-linear-to-r from-accent/90 to-accent rounded-lg p-10 md:p-14 shadow-xl text-center mb-16">
+          <div className="w-16 h-16 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-6">
+            <MessageCircle className="w-8 h-8 text-white" />
           </div>
-
-          {/* Ethereum Payment Card */}
-          <div className="bg-background rounded-lg shadow-lg overflow-hidden border border-muted-foreground/20">
-            <div className="bg-linear-to-r from-blue-500/90 to-purple-600/90 p-6 text-white">
-              <div className="flex items-center gap-3 mb-2">
-                <Wallet className="w-8 h-8" />
-                <h2 className="text-2xl font-serif font-bold">Ethereum (ETH)</h2>
-              </div>
-              <p className="text-white/90">Fast and reliable payment method</p>
-            </div>
-
-            <div className="p-6">
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Send your Ethereum payment to the address below. Click to copy the address:
-              </p>
-
-              {/* Address display - clickable */}
-              <div
-                onClick={() => copyToClipboard(ethAddress, 'ETH')}
-                className="bg-muted/50 rounded-lg p-4 mb-4 cursor-pointer hover:bg-muted transition-colors border border-muted-foreground/20"
-              >
-                <p className="text-foreground font-mono text-sm break-all leading-relaxed">
-                  {ethAddress}
-                </p>
-              </div>
-
-              {/* Copy button */}
-              <button
-                onClick={() => copyToClipboard(ethAddress, 'ETH')}
-                className="w-full py-3 px-6 bg-accent text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                {copiedETH ? (
-                  <>
-                    <Check className="w-5 h-5" />
-                    Address Copied!
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-5 h-5" />
-                    Copy ETH Address
-                  </>
-                )}
-              </button>
-            </div>
-          </div>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
+            Let's Arrange Your Payment
+          </h2>
+          <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            Contact me with the service you'd like to book, and I'll send over the payment
+            details and confirm your appointment together.
+          </p>
+          <button
+            onClick={() => (window.location.href = '/contact')}
+            className="px-10 py-4 bg-white text-accent font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Contact Me
+          </button>
         </div>
 
-        {/* Payment Instructions */}
+        {/* How it works */}
         <div className="bg-muted/50 rounded-lg p-8 md:p-10 shadow-lg mb-16">
           <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3 inline-block">
-              How to Complete Your Payment
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3">
+              How It Works
             </h2>
             <div className="w-24 h-1 bg-accent rounded-full mt-2"></div>
           </div>
@@ -145,9 +53,9 @@ export default function PaymentPage() {
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-accent">1</span>
               </div>
-              <h3 className="text-foreground font-bold mb-2">Copy Address</h3>
+              <h3 className="text-foreground font-bold mb-2">Get in Touch</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Click the copy button or tap the address to copy your preferred cryptocurrency wallet address.
+                Send a message with the service you're interested in and your preferred date.
               </p>
             </div>
 
@@ -155,9 +63,9 @@ export default function PaymentPage() {
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-accent">2</span>
               </div>
-              <h3 className="text-foreground font-bold mb-2">Send Payment</h3>
+              <h3 className="text-foreground font-bold mb-2">Confirm Details</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Open your crypto wallet and send the exact amount for your selected service to the copied address.
+                I'll confirm availability and share the payment details for your booking.
               </p>
             </div>
 
@@ -165,75 +73,58 @@ export default function PaymentPage() {
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-accent">3</span>
               </div>
-              <h3 className="text-foreground font-bold mb-2">Confirm Booking</h3>
+              <h3 className="text-foreground font-bold mb-2">Book Your Session</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Contact me with your transaction ID and booking details to confirm your appointment.
+                Once payment is confirmed, your appointment is officially booked.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Important Information */}
+        {/* Trust info */}
         <div className="bg-background rounded-lg shadow-lg p-8 border border-muted-foreground/20 mb-16">
           <h3 className="text-xl font-serif font-bold text-foreground mb-6 flex items-center gap-2">
-            <Shield className="w-6 h-6 text-accent" />
-            Important Payment Information
+            <ShieldCheck className="w-6 h-6 text-accent" />
+            What to Expect
           </h3>
 
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <Clock className="w-5 h-5 text-accent shrink-0 mt-1" />
               <div>
-                <h4 className="text-foreground font-bold mb-1">Transaction Confirmation Time</h4>
+                <h4 className="text-foreground font-bold mb-1">Quick Response</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Bitcoin transactions typically take 10-30 minutes to confirm. Ethereum transactions are usually confirmed within 2-5 minutes.
+                  I typically respond to booking and payment inquiries within 24 hours.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <Shield className="w-5 h-5 text-accent shrink-0 mt-1" />
+              <ShieldCheck className="w-5 h-5 text-accent shrink-0 mt-1" />
               <div>
-                <h4 className="text-foreground font-bold mb-1">Security & Privacy</h4>
+                <h4 className="text-foreground font-bold mb-1">Privacy First</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  All transactions are secure and anonymous. I never share your payment information with third parties.
+                  Your information is kept confidential and is never shared with third parties.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <Check className="w-5 h-5 text-accent shrink-0 mt-1" />
+              <CreditCard className="w-5 h-5 text-accent shrink-0 mt-1" />
               <div>
-                <h4 className="text-foreground font-bold mb-1">Booking Confirmation</h4>
+                <h4 className="text-foreground font-bold mb-1">Flexible Arrangements</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  After your payment is confirmed, I'll reach out within 24 hours to finalize your appointment details.
+                  Payment options are discussed and agreed upon before your session is confirmed.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Contact CTA */}
-        <div className="text-center bg-linear-to-r from-accent/90 to-accent rounded-lg p-8 md:p-12 shadow-xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
-            Need Help with Your Payment?
-          </h2>
-          <p className="text-white/90 text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
-            My team is here to assist you. Contact me if you have any questions or need 
-            support completing your transaction.
-          </p>
-          <button
-            onClick={() => window.location.href = '/contact'}
-            className="px-10 py-4 bg-white text-accent font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Contact Support
-          </button>
-        </div>
-
         {/* Pricing Reference */}
-        <div className="mt-12 text-center">
+        <div className="text-center">
           <p className="text-muted-foreground leading-relaxed">
-            Not sure about pricing? <a href="/pricing" className="text-accent hover:underline font-bold">View my pricing page</a> to see all available packages.
+            Not sure about pricing? <a href="/prices" className="text-accent hover:underline font-bold">View my pricing page</a> to see all available packages.
           </p>
         </div>
       </div>

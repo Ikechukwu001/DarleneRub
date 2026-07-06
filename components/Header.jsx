@@ -111,7 +111,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <nav
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? 'max-h-[500px]' : 'max-h-0'
+            isMenuOpen ? 'max-h-125' : 'max-h-0'
           }`}
         >
           <div className="py-4 border-t border-border space-y-3">
