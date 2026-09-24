@@ -46,7 +46,7 @@ export default function ContactPage() {
         {/* Heading */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 inline-block">
-            Contact & Bookings
+            Contact & Booking
           </h1>
           <div className="w-24 h-1 bg-accent rounded-full mt-2"></div>
         </div>
