@@ -98,15 +98,15 @@ export default function Footer() {
                   href="tel:+1234567890" 
                   className="hover:text-white transition-colors"
                 >
-                  (720) 878-9647
+                  (704) 236-7496
                 </a>
               </li>
               <li>
                 <a 
-                  href="mailto:info@serenitytouch.com" 
+                  href="mailto:darlensrub@gmail.com" 
                   className="hover:text-white transition-colors"
                 >
-                  servicedarlene2@gmail.com
+                  darlensrub@gmail.com
                 </a>
               </li>
             </ul>

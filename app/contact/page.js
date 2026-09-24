@@ -53,11 +53,10 @@ export default function ContactPage() {
 
         {/* Contact methods */}
         <div className="grid gap-6 mb-20">
-          <ContactItem icon={<Phone className="w-6 h-6" />} label="Call / Text" value="(720) 878-9647" href="tel:+17208789647" />
-          <ContactItem icon={<MessageCircle className="w-6 h-6" />} label="WhatsApp" value="(720) 878-9647" href="https://wa.me/17208789647" />
-          <ContactItem icon={<Lock className="w-6 h-6" />} label="Signal" value="(720) 878-9647" href="https://signal.me/#p/+17208789647" />
-          <ContactItem icon={<Send className="w-6 h-6" />} label="Telegram" value="(720) 878-9647" href="https://t.me/+17208789647" />
-          <ContactItem icon={<Disc className="w-6 h-6" />} label="Discord" value="Sweet_darlene / (720) 878-9647" href="https://discord.com/" />
+          <ContactItem icon={<Phone className="w-6 h-6" />} label="Call / Text" value="(704) 236-7496" href="tel:+7042367496" />
+          <ContactItem icon={<MessageCircle className="w-6 h-6" />} label="WhatsApp" value="(704) 236-7496" href="https://wa.me/+7042367496" />
+          <ContactItem icon={<Lock className="w-6 h-6" />} label="Signal" value="(704) 236-7496" href="https://signal.me/#p/++7042367496" />
+          <ContactItem icon={<Disc className="w-6 h-6" />} label="Discord" value="darlensrub / (704) 236-7496" href="https://discord.com/" />
         </div>
 
         {/* Booking Form */}
